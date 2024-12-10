@@ -1,0 +1,20 @@
+[
+  {
+    "id": "casa-paradise",
+    "nombre": "Casa Paradise",
+    "descripcion": "Es una hermosa casa playera de madera y chapa negra. Cuenta con un living comedor, barra y cocina totalmente equipada; tres habitaciones y un baño completo. Un deck de madera con parrilla individual. En espacios comunes del predio también podrán disfrutar del quincho al aire libre y fogonero.",
+    "imagenes": ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+  },
+  {
+    "id": "del-mar",
+    "nombre": "Del Mar",
+    "descripcion": "Cuenta en planta baja con cocina comedor, dos camas individuales en el mismo ambiente y un baño; y por escalera una habitación con dos camas individuales (con opción a hacerla matrimonial).",
+    "imagenes": ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+  },
+  {
+    "id": "rincon",
+    "nombre": "Rincon",
+    "descripcion": "Cuenta en planta baja con un pequeño comedor, cocina y baño; y por escalera en planta alta tiene de una habitación con una cama matrimonial y dos camas individuales. Capacidad para 4 personas.",
+    "imagenes": ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+  }
+]
