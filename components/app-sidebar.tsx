@@ -29,11 +29,11 @@ const items = [
     url: "rincon",
     icon: Home,
   },
-  {
-    title: "Galeria de imagenes",
-    url: "#",
-    icon: Home,
-  },
+  // {
+  //   title: "Galeria de imagenes",
+  //   url: "#",
+  //   icon: Home,
+  // },
 ];
 
 export function AppSidebar() {

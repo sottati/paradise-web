@@ -16,7 +16,7 @@ export function CabanaCard({ cabana }: CabanaCardProps) {
           alt={cabana.nombre}
           width={600}
           height={400}
-          className="w-full h-48 object-cover aspect-square"
+          className="w-full object-cover aspect-square"
         />
         <div className="flex flex-row justify-between p-2 gap-8">
           <h3 className="text-xl font-semibold">{cabana.nombre}</h3>

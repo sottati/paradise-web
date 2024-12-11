@@ -25,8 +25,8 @@ export default function Home() {
         Cruz del Sur.
       </p>
       <div className="flex flex-row justify-around gap-8">
-        {cabanas.map((cabana: Cabana) => (
-          <CabanaCard cabana={cabana} />
+        {cabanas.map((cabana: Cabana, index: number) => (
+          <CabanaCard key={index} cabana={cabana} />
         ))}
       </div>
       <p>

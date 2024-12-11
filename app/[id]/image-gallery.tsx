@@ -45,7 +45,7 @@ export default function ImageGallery({ images }: { images: string[] }) {
             />
           </div>
         </DialogTrigger>
-        <DialogContent className="max-w-[95vw] p-0 border-none bg-transparent text-red-600">
+        <DialogContent className="max-w-[95vw] p-0 border-none bg-transparent text-white">
           <div className="relative w-full h-full min-h-[80vh] flex items-center justify-center">
             <Button onClick={prevImage} size="icon">
               <ChevronLeft></ChevronLeft>
@@ -63,43 +63,8 @@ export default function ImageGallery({ images }: { images: string[] }) {
             <Button onClick={nextImage} size="icon">
               <ChevronRight></ChevronRight>
             </Button>
-            {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white">
-              {currentImage + 1} / {images.length}
-            </div> */}
           </div>
         </DialogContent>
-
-        {/* <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent">
-          <div className="relative w-full h-full min-h-[80vh] flex items-center justify-center">
-            <Button
-              onClick={prevImage}
-              size="icon"
-              // className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl
-              //          hover:text-gray-300 bg-black/50 p-2 rounded-full z-10"
-            >
-              <ChevronLeft></ChevronLeft>
-            </Button>
-
-            <div className="relative w-full h-full">
-              <Image
-                src={images[currentImage]}
-                alt={`Imagen ${currentImage + 1}`}
-                fill
-                className="object-contain"
-                quality={100}
-                priority
-              />
-            </div>
-
-            <Button onClick={nextImage} size="icon">
-              <ChevronRight></ChevronRight>
-            </Button>
-
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white">
-              {currentImage + 1} / {images.length}
-            </div>
-          </div>
-        </DialogContent> */}
       </Dialog>
 
       <div className="flex flex-row justify-center space-x-2 overflow-x-auto py-2">
