@@ -39,9 +39,9 @@ export default function RootLayout({
             <SidebarTrigger />
           </div> */}
           <main className="relative w-full flex flex-col">
-            <div className="sm:hidden sticky top-0 bg-white z-10 flex flex-row py-2 border-b-2">
+            <div className="sm:hidden sticky top-0 bg-white z-10 flex flex-row justify-between py-2 px-4 border-b-2">
+              <h2 className="text-xl font-bold">Paradise</h2>
               <SidebarTrigger />
-              <h2>Paradise</h2>
             </div>
             {children}
             <Footer />

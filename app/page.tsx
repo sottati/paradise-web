@@ -2,14 +2,17 @@ import { Amenities } from "@/components/amenities";
 import { CabanaCard } from "../components/cabana-card";
 import { HomeSlider } from "@/components/home-slider";
 
-import cabanas from "@/app/data/cabanas.json";
+import cabanasData from "@/app/data/cabanas.json";
 import Link from "next/link";
 import Image from "next/image";
+import { Cabana, Cabanas } from "./types/cabana-images";
+
+const cabanas: Cabanas = cabanasData as Cabanas;
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-4xl flex flex-col p-4 sm:p-8 gap-4">
-      <HomeSlider></HomeSlider>
+    <div className="mx-auto w-full max-w-4xl flex flex-col p-4 sm:p-8 gap-8">
+      <HomeSlider />
       <h1 className="text-4xl font-extrabold">Cabañas Paradise Chapadmalal</h1>
       <p>
         Paradise Chapadmalal es el lugar perfecto para pasar vacaciones o
@@ -21,25 +24,9 @@ export default function Home() {
         10 y 12), a 350 metros de la playa Paradise y a 450 metros del Balneario
         Cruz del Sur.
       </p>
-      <div className="w-full flex flex-col sm:flex-row justify-between">
-        {cabanas.map((cabana) => (
-          <Link href={cabana.id} key={cabana.id} className="block">
-            <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <Image
-                src={cabana.imagenes[0]}
-                alt={cabana.nombre}
-                width={600}
-                height={400}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{cabana.nombre}</h3>
-                <p className="text-gray-600">
-                  {cabana.descripcion.substring(0, 100)}...
-                </p>
-              </div>
-            </div>
-          </Link>
+      <div className="flex flex-row justify-around gap-8">
+        {cabanas.map((cabana: Cabana) => (
+          <CabanaCard cabana={cabana} />
         ))}
       </div>
       <p>
