@@ -8,6 +8,7 @@ type CabanaCardProps = {
 };
 
 export function CabanaCard({ cabana }: CabanaCardProps) {
+  console.log(cabana);
   return (
     <Link href={cabana.id} key={cabana.id} className="block">
       <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
