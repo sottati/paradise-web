@@ -2,7 +2,12 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -46,9 +51,10 @@ export default function ImageGallery({ images }: { images: string[] }) {
           </div>
         </DialogTrigger>
         <DialogContent className="max-w-[95vw] p-0 border-none bg-transparent text-white">
+          <DialogTitle className="hidden">Titulo del dialog</DialogTitle>
           <div className="relative w-full h-full min-h-[80vh] flex items-center justify-center">
             <Button onClick={prevImage} size="icon">
-              <ChevronLeft></ChevronLeft>
+              <ChevronLeft />
             </Button>
             <div className="relative w-full h-full">
               <Image
@@ -61,13 +67,13 @@ export default function ImageGallery({ images }: { images: string[] }) {
               />
             </div>
             <Button onClick={nextImage} size="icon">
-              <ChevronRight></ChevronRight>
+              <ChevronRight />
             </Button>
           </div>
         </DialogContent>
       </Dialog>
 
-      <div className="flex flex-row justify-center space-x-2 overflow-x-auto py-2">
+      <div className="flex flex-row justify-start space-x-2 overflow-x-scroll py-2">
         {images.map((image, index) => (
           <button
             key={index}
