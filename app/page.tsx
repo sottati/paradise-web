@@ -24,7 +24,7 @@ export default function Home() {
         10 y 12), a 350 metros de la playa Paradise y a 450 metros del Balneario
         Cruz del Sur.
       </p>
-      <div className="flex flex-row justify-around gap-8">
+      <div className="flex flex-col sm:flex-row justify-around gap-8">
         {cabanas.map((cabana: Cabana, index: number) => (
           <CabanaCard key={index} cabana={cabana} />
         ))}

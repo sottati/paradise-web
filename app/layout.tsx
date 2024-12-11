@@ -5,6 +5,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,7 +41,9 @@ export default function RootLayout({
           </div> */}
           <main className="relative w-full flex flex-col">
             <div className="sm:hidden sticky top-0 bg-white z-10 flex flex-row justify-between py-2 px-4 border-b-2">
-              <h2 className="text-xl font-bold">Paradise</h2>
+              <Link href="/">
+                <h2 className="text-xl font-bold">Paradise</h2>
+              </Link>
               <SidebarTrigger />
             </div>
             {children}

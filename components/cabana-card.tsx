@@ -8,7 +8,6 @@ type CabanaCardProps = {
 };
 
 export function CabanaCard({ cabana }: CabanaCardProps) {
-  console.log(cabana);
   return (
     <Link href={cabana.id} key={cabana.id} className="block">
       <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
@@ -17,9 +16,9 @@ export function CabanaCard({ cabana }: CabanaCardProps) {
           alt={cabana.nombre}
           width={600}
           height={400}
-          className="w-full object-cover aspect-square"
+          className="hidden sm:flex w-full object-cover aspect-square"
         />
-        <div className="flex flex-row justify-between p-2 gap-8">
+        <div className="flex flex-row justify-between p-4 gap-8">
           <h3 className="text-xl font-semibold">{cabana.nombre}</h3>
           <p className="flex flex-row gap-1">
             <span className="text-lg font-semibold">{cabana.capacidad}</span>
