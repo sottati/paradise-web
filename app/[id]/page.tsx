@@ -30,11 +30,11 @@ export default async function CabanaPage({
 
   return (
     <div className="mx-auto w-full max-w-4xl flex flex-col p-4 sm:p-8 gap-4">
-      <header className="flex flex-row gap-4">
+      <header className="flex flex-row justify-between sm:justify-start gap-4">
         <h2 className="text-3xl font-bold">{cabana.nombre}</h2>
         <span className="flex flex-row gap-2 my-auto text-xl font-semibold">
           {cabana.capacidad}
-          <User></User>
+          <User />
         </span>
       </header>
       <div>

@@ -1,5 +1,4 @@
-import { GalleryVerticalEnd, Home } from "lucide-react";
-
+import { GalleryVerticalEnd, Home, TreePalm } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -11,6 +10,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { WeatherWidget } from "./weather-widget";
+import Image from "next/image";
 
 // Menu items.
 const items = [
@@ -22,7 +22,7 @@ const items = [
   {
     title: "Del Mar",
     url: "del-mar",
-    icon: Home,
+    icon: TreePalm,
   },
   {
     title: "Rincon",
@@ -44,11 +44,17 @@ export function AppSidebar() {
           {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuButton className="hidden sm:flex" size="lg" asChild>
+              <SidebarMenuButton size="lg" asChild>
                 <a href="/">
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                  <Image
+                    src="/paradise-logo.jpeg"
+                    alt="Logo Paradise"
+                    width={28}
+                    height={28}
+                  />
+                  {/* <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                     <GalleryVerticalEnd className="size-4" />
-                  </div>
+                  </div> */}
                   <div className="flex flex-col gap-0.5 leading-none">
                     <span className="font-semibold">Paradise Chapadmalal</span>
                     <span className="">Cabañas de mar</span>
@@ -59,7 +65,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
-                      <item.icon />
+                      {/* <item.icon /> */}
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
