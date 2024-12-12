@@ -36,12 +36,15 @@ export default function Home() {
         familiar.
       </p>
       <Amenities />
-      <div className="mb-12 rounded-xl overflow-clip">
-        <iframe
-          className="w-full h-72"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.462868040775!2d-57.65595082331227!3d-38.17592105482406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95851d1592f6455b%3A0x4565673369ada6ae!2sCaba%C3%B1as%20Paradise%20Chapadmalal!5e0!3m2!1ses!2sar!4v1698957755061!5m2!1ses!2sar"
-          loading="lazy"
-        ></iframe>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-2xl font-bold">Encontranos aca:</h3>
+        <div className="mb-12 rounded-xl overflow-clip">
+          <iframe
+            className="w-full h-72"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.462868040775!2d-57.65595082331227!3d-38.17592105482406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95851d1592f6455b%3A0x4565673369ada6ae!2sCaba%C3%B1as%20Paradise%20Chapadmalal!5e0!3m2!1ses!2sar!4v1698957755061!5m2!1ses!2sar"
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </div>
   );

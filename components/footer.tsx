@@ -2,7 +2,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-200 flex flex-row justify-between p-4 px-12">
+    <footer className="bg-neutral-200 flex flex-row justify-between p-4 sm:px-12">
       <p>Paradise Chapadmalal / {currentYear}</p>
       <div className="flex flex-row gap-4">
         <a

@@ -62,7 +62,7 @@ const amenitiesData: Amenity[] = [
   },
   {
     id: "TV",
-    title: "DirecTV prepago",
+    title: "DirecTV Prepago",
     description:
       "Televisión satelital, 100% digital. Contamos con televisores Smart para poder utilizar aplicaciones de streaming de series/peliculas.",
     icon: "Tv",
@@ -88,7 +88,7 @@ const AmenityCard = ({ title, description, icon }: Amenity) => {
     <Card className="h-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <IconComponent className="h-5 w-5 text-red-600" />
+          <IconComponent className="h-5 w-5 text-sky-500" />
           {title}
         </CardTitle>
       </CardHeader>

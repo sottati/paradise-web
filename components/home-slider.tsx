@@ -2,6 +2,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -20,10 +21,26 @@ export const HomeSlider = () => {
       }}
       loop={true} // Permite que el slider sea infinito
     >
-      <SwiperSlide className="bg-red-300 rounded-lg">Slide 1</SwiperSlide>
-      <SwiperSlide className="bg-red-400 rounded-lg">Slide 2</SwiperSlide>
-      <SwiperSlide className="bg-red-500 rounded-lg">Slide 3</SwiperSlide>
-      <SwiperSlide className="bg-red-600 rounded-lg">Slide 4</SwiperSlide>
+      <SwiperSlide className="bg-red-300 rounded-lg">
+        <Image
+          src="/general/general-001.jpeg"
+          alt="Prueba"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded-lg"
+        />
+      </SwiperSlide>
+      <SwiperSlide className="bg-red-400 rounded-lg">
+        <Image
+          src="/general/general-002.jpeg"
+          alt="Prueba"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded-lg"
+        />
+      </SwiperSlide>
     </Swiper>
   );
 };
