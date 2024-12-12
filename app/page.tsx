@@ -1,11 +1,11 @@
 import { Amenities } from "@/components/amenities";
 import { CabanaCard } from "../components/cabana-card";
 import { HomeSlider } from "@/components/home-slider";
-
 import cabanasData from "@/app/data/cabanas.json";
 import Link from "next/link";
-import Image from "next/image";
 import { Cabana, Cabanas } from "./types/cabana-images";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 
 const cabanas: Cabanas = cabanasData as Cabanas;
 
@@ -13,7 +13,17 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-4xl flex flex-col p-4 sm:p-8 gap-8">
       <HomeSlider />
-      <h1 className="text-4xl font-extrabold">Cabañas Paradise Chapadmalal</h1>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-4xl font-extrabold">
+          Cabañas Paradise Chapadmalal
+        </h1>
+        <Link target="_blank" href="https://wa.link/ob3h9i">
+          <Button variant="verde">
+            Hace tu reserva
+            <Calendar />
+          </Button>
+        </Link>
+      </div>
       <p>
         Paradise Chapadmalal es el lugar perfecto para pasar vacaciones o
         simplemente disfrutar de unos días de descanso con familia y amigos,
